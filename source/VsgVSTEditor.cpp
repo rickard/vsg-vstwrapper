@@ -6,6 +6,11 @@
 VsgVSTEditor :: VsgVSTEditor(VsgEditor& vsgEditor, void *effect) : mEditor(vsgEditor), mAudioEffect((AudioEffect *) effect) {
 	mAudioEffect->setEditor(this);
 	mIsIdle = false;
+	VsgWindowBounds windowSize = mEditor.getWindowSize();
+	mRect.top = windowSize.getTop();
+	mRect.bottom = windowSize.getBottom();
+	mRect.left = windowSize.getLeft();
+	mRect.right = windowSize.getRight();
 }
 
 bool VsgVSTEditor :: getRect(ERect** rect) {
