@@ -6,7 +6,7 @@
 
 class VstKeyCode;
 
-class VsgVSTKey : public VsgKey {
+class VsgVSTKey : public Vsg::VsgKey {
 public:
 	VsgVSTKey(VstKeyCode& keycode);
 	

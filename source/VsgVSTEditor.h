@@ -2,15 +2,15 @@
 #define __VsgVSTEditor_h__	
 
 #include "public.sdk/source/vst2.x/aeffeditor.h"
-#include <vsg/VsgIdler.h>
+#include <vsg/VsgOnIdleCallback.h>
 #include <vsg/VsgOnEditCallback.h>
+#include <vsg/VsgEditor.h>
 
-class VsgEditor;
 class EERect;
 
-class VsgVSTEditor : AEffEditor, VsgIdler, VsgOnEditCallback {
+class VsgVSTEditor : public AEffEditor, public Vsg::VsgOnIdleCallback, public Vsg::VsgOnEditCallback {
 public:
-	VsgVSTEditor(VsgEditor& vsgEditor, void *effect);
+	VsgVSTEditor(Vsg::VsgEditor& vsgEditor, void *effect);
 	bool getRect(ERect** rect);
 	bool open(void *ptr);
 	
@@ -25,12 +25,12 @@ public:
 #endif	
 	
 	void draw(ERect* pRect);
-	void idle();
-	void masterIdle();
+	void idleCallback();
+	void masterIdleCallback();
 	
 private:
 	ERect mRect;
-	VsgEditor& mEditor;
+	Vsg::VsgEditor& mEditor;
 	AudioEffect *mAudioEffect;
 	bool mIsIdle;
 };

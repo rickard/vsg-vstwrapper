@@ -11,11 +11,11 @@
 		FF7FBF67100E4B5300982B8B /* VsgVSTBounds.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7FBF5E100E4B5300982B8B /* VsgVSTBounds.h */; };
 		FF7FBF68100E4B5300982B8B /* VsgVSTEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBF5F100E4B5300982B8B /* VsgVSTEditor.cpp */; };
 		FF7FBF69100E4B5300982B8B /* VsgVSTEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7FBF60100E4B5300982B8B /* VsgVSTEditor.h */; };
-		FF7FBF6A100E4B5300982B8B /* VsgVSTIdler.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7FBF61100E4B5300982B8B /* VsgVSTIdler.h */; };
 		FF7FBF6B100E4B5300982B8B /* VsgVSTKey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF7FBF62100E4B5300982B8B /* VsgVSTKey.cpp */; };
 		FF7FBF6C100E4B5300982B8B /* VsgVSTKey.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7FBF63100E4B5300982B8B /* VsgVSTKey.h */; };
 		FF7FBF6D100E4B5300982B8B /* VsgVSTOnEditCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7FBF64100E4B5300982B8B /* VsgVSTOnEditCallback.h */; };
 		FF7FBF6E100E4B5300982B8B /* VsgVSTTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7FBF65100E4B5300982B8B /* VsgVSTTypes.h */; };
+		FF81AB42100F8B5900D20D76 /* VsgVSTOnIdleCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = FF81AB41100F8B5900D20D76 /* VsgVSTOnIdleCallback.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +23,12 @@
 		FF7FBF5E100E4B5300982B8B /* VsgVSTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VsgVSTBounds.h; path = source/VsgVSTBounds.h; sourceTree = "<group>"; };
 		FF7FBF5F100E4B5300982B8B /* VsgVSTEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VsgVSTEditor.cpp; path = source/VsgVSTEditor.cpp; sourceTree = "<group>"; };
 		FF7FBF60100E4B5300982B8B /* VsgVSTEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VsgVSTEditor.h; path = source/VsgVSTEditor.h; sourceTree = "<group>"; };
-		FF7FBF61100E4B5300982B8B /* VsgVSTIdler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VsgVSTIdler.h; path = source/VsgVSTIdler.h; sourceTree = "<group>"; };
 		FF7FBF62100E4B5300982B8B /* VsgVSTKey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VsgVSTKey.cpp; path = source/VsgVSTKey.cpp; sourceTree = "<group>"; };
 		FF7FBF63100E4B5300982B8B /* VsgVSTKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VsgVSTKey.h; path = source/VsgVSTKey.h; sourceTree = "<group>"; };
 		FF7FBF64100E4B5300982B8B /* VsgVSTOnEditCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VsgVSTOnEditCallback.h; path = source/VsgVSTOnEditCallback.h; sourceTree = "<group>"; };
 		FF7FBF65100E4B5300982B8B /* VsgVSTTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VsgVSTTypes.h; path = source/VsgVSTTypes.h; sourceTree = "<group>"; };
-		FF7FC4CF100E602900982B8B /* libvsg-vstwrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libvsg-vstwrapper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF81AB41100F8B5900D20D76 /* VsgVSTOnIdleCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VsgVSTOnIdleCallback.h; path = source/VsgVSTOnIdleCallback.h; sourceTree = "<group>"; };
+		FFAFA222100E6DE100547217 /* libvsg-vstwrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libvsg-vstwrapper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +59,10 @@
 				FF7FBF5E100E4B5300982B8B /* VsgVSTBounds.h */,
 				FF7FBF5F100E4B5300982B8B /* VsgVSTEditor.cpp */,
 				FF7FBF60100E4B5300982B8B /* VsgVSTEditor.h */,
-				FF7FBF61100E4B5300982B8B /* VsgVSTIdler.h */,
 				FF7FBF62100E4B5300982B8B /* VsgVSTKey.cpp */,
 				FF7FBF63100E4B5300982B8B /* VsgVSTKey.h */,
 				FF7FBF64100E4B5300982B8B /* VsgVSTOnEditCallback.h */,
+				FF81AB41100F8B5900D20D76 /* VsgVSTOnIdleCallback.h */,
 				FF7FBF65100E4B5300982B8B /* VsgVSTTypes.h */,
 			);
 			name = Source;
@@ -71,7 +71,7 @@
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF7FC4CF100E602900982B8B /* libvsg-vstwrapper.a */,
+				FFAFA222100E6DE100547217 /* libvsg-vstwrapper.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,10 +92,10 @@
 			files = (
 				FF7FBF67100E4B5300982B8B /* VsgVSTBounds.h in Headers */,
 				FF7FBF69100E4B5300982B8B /* VsgVSTEditor.h in Headers */,
-				FF7FBF6A100E4B5300982B8B /* VsgVSTIdler.h in Headers */,
 				FF7FBF6C100E4B5300982B8B /* VsgVSTKey.h in Headers */,
 				FF7FBF6D100E4B5300982B8B /* VsgVSTOnEditCallback.h in Headers */,
 				FF7FBF6E100E4B5300982B8B /* VsgVSTTypes.h in Headers */,
+				FF81AB42100F8B5900D20D76 /* VsgVSTOnIdleCallback.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +116,7 @@
 			);
 			name = "vsg-vstwrapper";
 			productName = "vsg-vstwrapper";
-			productReference = FF7FC4CF100E602900982B8B /* libvsg-vstwrapper.a */;
+			productReference = FFAFA222100E6DE100547217 /* libvsg-vstwrapper.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -184,8 +184,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../vsg.new/source\"",
-					"\"$(SRCROOT)/../simpleton/vstsdk2.4\"/**",
+					"\"$(SRCROOT)/../vsg/source\"",
+					"\"$(SRCROOT)/../vstsdk2.4\"/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;

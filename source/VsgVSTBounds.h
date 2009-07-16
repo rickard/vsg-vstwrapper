@@ -3,7 +3,7 @@
 
 #include <vsg/VsgBounds.h>
 
-class VsgVSTBounds : public VsgBounds {
+class VsgVSTBounds : public Vsg::VsgBounds {
 public:
 	VsgVSTBounds(short top, short left, short bottom, short right) : mTop(top), mLeft(left), mBottom(bottom), mRight(right) {}
 	

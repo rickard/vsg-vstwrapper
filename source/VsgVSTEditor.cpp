@@ -3,14 +3,17 @@
 #include "VsgVSTBounds.h"
 #include <vsg/VsgEditor.h>
 
+using Vsg::VsgEditor;
+using Vsg::VsgWindowBounds;
+using Vsg::VsgRedrawAllBounds;
+
 VsgVSTEditor :: VsgVSTEditor(VsgEditor& vsgEditor, void *effect) : mEditor(vsgEditor), mAudioEffect((AudioEffect *) effect) {
 	mAudioEffect->setEditor(this);
+	mRect.top = 0;
+	mRect.bottom = 300;
+	mRect.left = 0;
+	mRect.right = 300;
 	mIsIdle = false;
-	VsgWindowBounds windowSize = mEditor.getWindowSize();
-	mRect.top = windowSize.getTop();
-	mRect.bottom = windowSize.getBottom();
-	mRect.left = windowSize.getLeft();
-	mRect.right = windowSize.getRight();
 }
 
 bool VsgVSTEditor :: getRect(ERect** rect) {
@@ -19,6 +22,7 @@ bool VsgVSTEditor :: getRect(ERect** rect) {
 }
 
 bool VsgVSTEditor :: open(void *ptr) {
+	mEditor.open(ptr);
 	return AEffEditor::open(ptr);
 }
 
@@ -48,22 +52,9 @@ void VsgVSTEditor :: draw (ERect* pRect) {
 		VsgVSTBounds bounds(pRect->top, pRect->left, pRect->bottom, pRect->right);
 		mEditor.draw(bounds);
 	}
-
-/*	if (frame)
-	{
-		CRect r;
-		if (ppErect)
-			r (ppErect->left, ppErect->top, ppErect->right, ppErect->bottom);
-		else
-			r = frame->getViewSize ();
-		CDrawContext* context = frame->createDrawContext();
-		frame->drawRect (context, r);
-		context->forget();
-	}
-*/
 }
 
-void VsgVSTEditor :: idle() {
+void VsgVSTEditor :: idleCallback() {
 	if (mIsIdle)
 		return;
 	
@@ -71,7 +62,7 @@ void VsgVSTEditor :: idle() {
 	mEditor.idle();
 }
 
-void VsgVSTEditor :: masterIdle() {
+void VsgVSTEditor :: masterIdleCallback() {
 	mIsIdle = true;
 	if (effect)
 		effect->masterIdle ();
